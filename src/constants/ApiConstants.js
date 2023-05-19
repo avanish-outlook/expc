@@ -1,7 +1,7 @@
-const ApiConstant = {
-    BASE_URL: "http://192.168.91.105:8000",
-    Register: "auth/register",
+export default ApiConstant = {
+    GET_PROFILE_INFO: "/profile/profileInfo/",
+    POST_FETCH_POST_COMMENTS: '/post/comment/list',
+    GET__USER_PROFILE: "/user/profile/",
+    POST__USER_PROFILE_PIC: "/user/uploadPic",
+
 }
-
-
-export default ApiConstant;
