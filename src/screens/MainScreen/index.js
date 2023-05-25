@@ -2,7 +2,7 @@ import React from 'react';
 import HomeTab, { ScreenHomeTab } from './components/HomeTab';
 import ProfileTab, { ScreenProfileTab } from './components/ProfileTab';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MiniTab, { ScreenMiniTab } from './components/MiniTab';
+import MiniTab, { ScreenMiniTab } from './components/ReportTab';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import HomeTabAppBar from './components/HomeAppBar';
 import { useTheme } from '@react-navigation/native';
@@ -27,13 +27,12 @@ const MainScreen = () => {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-
           switch (route.name) {
             case TABSCREEN.Home:
               iconName = focused ? "home" : "home-outline";
               break;
             case TABSCREEN.MINI:
-              iconName = focused ? "happy" : "happy-outline";
+              iconName = focused ? "analytics" : "analytics-outline";
               break;
             case TABSCREEN.Profile:
               iconName = focused ? "person" : "person-outline";
@@ -45,12 +44,7 @@ const MainScreen = () => {
         },
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: {
-          backgroundColor: (route.name === TABSCREEN.MINI) ? "#000" : colors.surface,
-
-        },
         tabBarActiveTintColor: colors.primary,
-        // tabBarInactiveTintColor: 'gray',
       })} >
       <Tab.Screen options={{ headerShown: false, header: (props) => <HomeTabAppBar  {...props} /> }}
         name={ScreenHomeTab} component={HomeTab} />
