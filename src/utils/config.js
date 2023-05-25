@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 
 
-const BACKEND_HOST_URL = "http://192.168.50.251:8000";
+const BACKEND_HOST_URL = "https://expense-api-uj2s.onrender.com";
 export default config = {
   APP_NAME: 'Mini',
   BACKEND_HOST_URL,
