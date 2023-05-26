@@ -4,7 +4,7 @@ import { useRoute, useTheme } from '@react-navigation/native';
 import useSize from '../../hooks/useSize';
 import stylesSheet from './styles';
 import { useDispatch } from 'react-redux';
-import { UiText } from '../../components';
+import { Input, UiText } from '../../components';
 import { AppBarLeft } from '../../components/AppBar';
 import { IconButton } from 'react-native-paper';
 import AppBar from './AppBar';
@@ -30,6 +30,9 @@ const EditAccount = ({ navigation }) => {
         <View style={{ flex: 1 }}>
             <AppBar navigation={navigation} title={"Edit Account"} />
             <ScrollView>
+                <View>
+                    <Input placeholder='Account name' />
+                </View>
 
             </ScrollView>
         </View>
