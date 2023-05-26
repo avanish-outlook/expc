@@ -1,13 +1,15 @@
 import { View, Text, FlatList } from 'react-native'
 import React, { useMemo } from 'react'
 import stylesSheet from './styles';
-import { useTheme } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import { Button, Card } from '../../../../components';
+import ScreenRoutes from '../../../../constants/ScreenRoutes';
 
 
 const AccountList = () => {
     const { colors, size } = useTheme()
     const styles = useMemo(() => stylesSheet(colors, size), [colors]);
+    const navigation = useNavigation()
 
     let list = [
         {
@@ -36,7 +38,7 @@ const AccountList = () => {
 
                 <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginHorizontal: size.S }}>
                     <Text style={styles.accountTitle}>Accounts</Text>
-                    <Button icon={"cog"} mode='outlined'  >Edit</Button>
+                    <Button icon={"cog"} mode='outlined' onPress={() => navigation.navigate(ScreenRoutes.AccountsScreen.name)} >Edit</Button>
                 </View>
                 <FlatList
                     data={list}
