@@ -3,7 +3,7 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'rea
 const stylesSheet = (colors, size) => StyleSheet.create({
     container: {
         flex: 1,
-        marginHorizontal: size.M
+        marginHorizontal: size.M,
     },
     accountTitle: {
         fontSize: 18,

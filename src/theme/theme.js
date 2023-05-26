@@ -1,5 +1,7 @@
 import { DarkTheme, DefaultTheme } from "@react-navigation/native";
 import { DefaultSize } from "./size";
+
+
 const Theme = {
 
     Dark: {
@@ -33,7 +35,7 @@ const Theme = {
             primaryDark: '#3700B3',
             secondary: '#03DAC6',
             secondaryDark: '#018786',
-            background: "#FFFFFF",
+            background: "#F5f5f5",
             surface: "#FFFFFF",
             error: "#B00020",
             primaryText: "#000",

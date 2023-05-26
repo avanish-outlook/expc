@@ -9,4 +9,4 @@ export { default as AppBar } from './AppBar';
 export { default as TextView } from './TextView';
 export { default as ProfilePostCard } from './ProfilePostCard';
 export { default as Text } from './Text';
-
+export { default as Card } from './Card';

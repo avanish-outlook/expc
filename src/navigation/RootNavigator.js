@@ -13,7 +13,8 @@ import ScreenRoutes from '../constants/ScreenRoutes.js';
 import { CreatePost, CreateReel, EditProfileScreen, LoginScreen, MainScreen, RegisterScreen, SplashScreen } from '../screens'
 import ViewProfile from '../screens/ViewProfile/index.js';
 import { ViewPost, ProfilePosts } from '../screens'
-
+import { DarkTheme as PaperDark, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import { getPaperTheme } from '../theme/paperTheme.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,9 +37,6 @@ const RootNavigator = () => {
   }, [themeColor])
 
 
-
-
-
   useEffect(() => {
     (async () => {
       const user = await AsyncStorage.getObject(AsyncStorageConstant.AUTH);
@@ -53,11 +51,15 @@ const RootNavigator = () => {
 
 
   return (
-    <NavigationContainer theme={appTheme}>
-      {
-        isLoading ? <Text style={{ flex: 1, justifyContent: 'center', alignSelf: 'center' }}>Loading... </Text> : LoggedInUser ? <MainStack /> : <AuthStack />
-      }
-    </NavigationContainer>
+    <PaperProvider >
+
+      <NavigationContainer theme={appTheme}>
+        {
+          isLoading ? <Text style={{ flex: 1, justifyContent: 'center', alignSelf: 'center' }}>Loading... </Text> : LoggedInUser ? <MainStack /> : <AuthStack />
+        }
+      </NavigationContainer>
+    </PaperProvider>
+
   );
 };
 
