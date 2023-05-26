@@ -13,4 +13,6 @@ export { default as ProfilePosts } from './ProfilePosts';
 export { default as Accounts } from './Accounts';
 
 export { default as CreateAccount } from './CreateAccount';
+export { default as EditAccount } from './EditAccount';
+
 

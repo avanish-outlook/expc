@@ -4,27 +4,37 @@ import { useTheme } from '@react-navigation/native';
 import useSize from '../../hooks/useSize';
 import stylesSheet from './styles';
 import { useDispatch } from 'react-redux';
-export const ScreenCreatePost = "ScreenCreatePost";
+import { UiText } from '../../components';
+import { AppBarLeft } from '../../components/AppBar';
+import { IconButton } from 'react-native-paper';
+import AppBar from './AppBar';
+
+
+
+
 
 /**
  * 
  * 
  * 
  */
-const ViewPost = ({ navigation }) => {
+const CreateAccount = ({ navigation }) => {
     const { colors } = useTheme()
     const { size } = useSize()
     const styles = useMemo(() => stylesSheet(colors, size), [colors]);
     const dispatch = useDispatch()
     return (
-        <ScrollView>
-            <View style={styles.container}>
-                <Text>Helloorld</Text>
-            </View>
 
-        </ScrollView>
+        <View style={{ flex: 1 }}>
+            <AppBar navigation={navigation} title={"New Page"} />
+            <ScrollView>
+
+            </ScrollView>
+        </View>
+
+
     )
 }
 
-export default ViewPost
+export default CreateAccount
 

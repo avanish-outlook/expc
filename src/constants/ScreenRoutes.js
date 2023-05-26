@@ -37,7 +37,10 @@ export default {
         name: "Accounts",
     },
     NewAccountScreen: {
-        name: "New Account",
+        name: "NewAccount",
+    },
+    EditAccountScreen: {
+        name: "EditAccount",
     },
 
 }

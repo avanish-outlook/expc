@@ -85,7 +85,8 @@ const Accounts = ({ navigation }) => {
                         <UiText color="s">{item.desc}</UiText>
                     </View>
 
-                    <IconButton icon={'circle-edit-outline'} color={colors.primaryText} />
+                    <IconButton icon={'circle-edit-outline'}
+                        onPress={() => navigation.push(ScreenRoutes.EditAccountScreen.name, { item })} color={colors.primaryText} />
                 </Card>
                 }
 
