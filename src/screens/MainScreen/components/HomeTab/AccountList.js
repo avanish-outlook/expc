@@ -32,7 +32,7 @@ const AccountList = () => {
 
     return (
         <View >
-            <Card>
+            <Card style={{ marginTop: size.S }}>
 
                 <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginHorizontal: size.S }}>
                     <Text style={styles.accountTitle}>Accounts</Text>

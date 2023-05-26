@@ -24,7 +24,8 @@ const stylesSheet = (colors, size) => StyleSheet.create({
         backgroundColor: colors.surface,
         padding: 20,
         borderRadius: 10,
-        margin: 4
+        margin: 4,
+        marginBottom: 8
     }
 
 
