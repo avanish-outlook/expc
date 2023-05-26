@@ -10,7 +10,7 @@ import { AppSettingSliceSelectors } from '../redux/slice/AppSettingsSlice.js';
 import Theme from '../theme/theme.js';
 
 import ScreenRoutes from '../constants/ScreenRoutes.js';
-import { Accounts, CreatePost, CreateReel, EditProfileScreen, LoginScreen, MainScreen, RegisterScreen, SplashScreen } from '../screens'
+import { Accounts, CreateAccount, CreatePost, CreateReel, EditProfileScreen, LoginScreen, MainScreen, RegisterScreen, SplashScreen } from '../screens'
 import ViewProfile from '../screens/ViewProfile/index.js';
 import { ViewPost, ProfilePosts } from '../screens'
 import { DarkTheme as PaperDark, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
@@ -131,6 +131,13 @@ function MainStack() {
       options={{ headerShown: false, title: 'Accounts' }}
       component={Accounts}
     />
+
+    <Stack.Screen
+      name={ScreenRoutes.NewAccountScreen.name}
+      options={{ headerShown: false, title: 'New Accounts' }}
+      component={CreateAccount}
+    />
+
 
   </Stack.Navigator>
 

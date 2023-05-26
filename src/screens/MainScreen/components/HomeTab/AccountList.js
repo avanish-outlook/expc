@@ -40,7 +40,9 @@ const AccountList = () => {
                     <Text style={styles.accountTitle}>Accounts</Text>
                     <Button icon={"cog"} mode='outlined' onPress={() => navigation.navigate(ScreenRoutes.AccountsScreen.name)} >Edit</Button>
                 </View>
-                <FlatList
+
+
+                {/* <FlatList
                     data={list}
                     renderItem={({ item, index }) => {
                         return <View style={{
@@ -53,7 +55,7 @@ const AccountList = () => {
                         </View>
                     }}
                     numColumns={2}
-                />
+                /> */}
             </Card>
 
         </View>

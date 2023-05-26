@@ -15,6 +15,7 @@ const AppBar = ({ children }) => {
             flexDirection: 'row', paddingHorizontal: size.M,
             alignItems: 'center',
             borderBottomColor: colors.border, borderWidth: .8,
+            elevation: 6
         }}>
 
             {children}
