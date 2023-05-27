@@ -36,13 +36,17 @@ const AccountList = () => {
         <View >
             <Card style={{ marginTop: size.S }}>
 
-                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginHorizontal: size.S }}>
-                    <Text style={styles.accountTitle}>Accounts</Text>
-                    <Button icon={"cog"} mode='outlined' onPress={() => navigation.navigate(ScreenRoutes.AccountsScreen.name)} >Edit</Button>
-                </View>
 
 
-                {/* <FlatList
+
+                <FlatList
+                    ListHeaderComponent={
+                        <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', marginHorizontal: size.S }}>
+                            <Text style={styles.accountTitle}>Accounts</Text>
+                            <Button icon={"cog"} mode='outlined' onPress={() => navigation.navigate(ScreenRoutes.AccountsScreen.name)} >Edit</Button>
+                        </View>
+
+                    }
                     data={list}
                     renderItem={({ item, index }) => {
                         return <View style={{
@@ -55,7 +59,7 @@ const AccountList = () => {
                         </View>
                     }}
                     numColumns={2}
-                /> */}
+                />
             </Card>
 
         </View>

@@ -19,7 +19,6 @@ function HomeTab() {
             <AppBar />
             <ScrollView style={{ backgroundColor: colors.background }}>
                 <View style={styles.container}>
-
                     <AccountList />
                 </View>
             </ScrollView>
