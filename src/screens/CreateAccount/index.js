@@ -8,11 +8,6 @@ import { Input, UiText } from '../../components';
 import { AppBarLeft } from '../../components/AppBar';
 import { IconButton } from 'react-native-paper';
 import AppBar from './AppBar';
-
-
-
-
-
 /**
  * 
  * 
@@ -32,8 +27,6 @@ const CreateAccount = ({ navigation }) => {
                     <Input placeholder='Account name' label={'Account name'} />
                     <Input placeholder='Bank Account Number (optional)' label={'Bank account number'} />
                     <Input placeholder='Initial Amount' label={'Initial Amount'} value='0' />
-
-
                 </View>
 
             </ScrollView>

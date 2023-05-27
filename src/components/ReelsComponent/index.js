@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { SwiperFlatList } from 'react-native-swiper-flatlist';
-import { videoList } from '../../__mock_data__/Database'
 import SingleReel from './SingleReel';
 import useFeed from '../../hooks/useFeed';
 /**
