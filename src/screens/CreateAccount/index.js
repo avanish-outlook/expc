@@ -1,28 +1,24 @@
-import { ScrollView, Text, View } from 'react-native'
+import { ScrollView, View } from 'react-native'
 import React, { useMemo } from 'react'
-import { useTheme } from '@react-navigation/native';
-import useSize from '../../hooks/useSize';
 import stylesSheet from './styles';
-import { useDispatch } from 'react-redux';
-import { Input, UiText } from '../../components';
-import { AppBarLeft } from '../../components/AppBar';
-import { IconButton } from 'react-native-paper';
+import { CategoryPicker, Input } from '../../components';
 import AppBar from './AppBar';
 
-
-
-
-
+import { useState } from 'react';
+import CurrencyPicker from '../../components/CurrencyPicker';
+import useScreen from '../../hooks/useScreen';
+import currency from '../../utils/currency';
 /**
  * 
  * 
  * 
  */
-const CreateAccount = ({ navigation }) => {
-    const { colors } = useTheme()
-    const { size } = useSize()
+const CreateAccount = () => {
+    const { colors, size, dispatch, isDark, themeColor, navigation } = useScreen()
     const styles = useMemo(() => stylesSheet(colors, size), [colors]);
-    const dispatch = useDispatch()
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedCurrency, setSelectedCurrency] = useState(currency[0]);
+
     return (
 
         <View style={{ flex: 1 }}>
@@ -32,8 +28,8 @@ const CreateAccount = ({ navigation }) => {
                     <Input placeholder='Account name' label={'Account name'} />
                     <Input placeholder='Bank Account Number (optional)' label={'Bank account number'} />
                     <Input placeholder='Initial Amount' label={'Initial Amount'} value='0' />
-
-
+                    <CategoryPicker selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+                    <CurrencyPicker selectedCurrency={selectedCurrency} setSelectedCurrency={setSelectedCurrency} />
                 </View>
 
             </ScrollView>
