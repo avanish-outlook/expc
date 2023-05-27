@@ -32,6 +32,11 @@ const AppBar = ({ title }) => {
             alignItems: 'center',
             borderBottomColor: colors.border,
             borderWidth: .8,
+            shadowRadius: 6,
+            shadowOpacity: 0.26,
+            elevation: 8,
+            backgroundColor: colors.surface,
+            marginBottom: 6
         }}>
             <View>
                 <Text style={{ fontSize: size.L, fontWeight: 'bold', color: colors.primary }}>

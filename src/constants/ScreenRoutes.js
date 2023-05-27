@@ -33,5 +33,14 @@ export default {
     ProfilePostsScreen: {
         name: "ProfilePostsScreen",
     },
+    AccountsScreen: {
+        name: "Accounts",
+    },
+    NewAccountScreen: {
+        name: "NewAccount",
+    },
+    EditAccountScreen: {
+        name: "EditAccount",
+    },
 
 }

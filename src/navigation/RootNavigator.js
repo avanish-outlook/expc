@@ -10,10 +10,11 @@ import { AppSettingSliceSelectors } from '../redux/slice/AppSettingsSlice.js';
 import Theme from '../theme/theme.js';
 
 import ScreenRoutes from '../constants/ScreenRoutes.js';
-import { CreatePost, CreateReel, EditProfileScreen, LoginScreen, MainScreen, RegisterScreen, SplashScreen } from '../screens'
+import { Accounts, CreateAccount, CreatePost, CreateReel, EditAccount, EditProfileScreen, LoginScreen, MainScreen, RegisterScreen, SplashScreen } from '../screens'
 import ViewProfile from '../screens/ViewProfile/index.js';
 import { ViewPost, ProfilePosts } from '../screens'
-
+import { DarkTheme as PaperDark, DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
+import { getPaperTheme } from '../theme/paperTheme.js';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,9 +37,6 @@ const RootNavigator = () => {
   }, [themeColor])
 
 
-
-
-
   useEffect(() => {
     (async () => {
       const user = await AsyncStorage.getObject(AsyncStorageConstant.AUTH);
@@ -53,11 +51,15 @@ const RootNavigator = () => {
 
 
   return (
-    <NavigationContainer theme={appTheme}>
-      {
-        isLoading ? <Text style={{ flex: 1, justifyContent: 'center', alignSelf: 'center' }}>Loading... </Text> : LoggedInUser ? <MainStack /> : <AuthStack />
-      }
-    </NavigationContainer>
+    <PaperProvider >
+
+      <NavigationContainer theme={appTheme}>
+        {
+          isLoading ? <Text style={{ flex: 1, justifyContent: 'center', alignSelf: 'center' }}>Loading... </Text> : LoggedInUser ? <MainStack /> : <AuthStack />
+        }
+      </NavigationContainer>
+    </PaperProvider>
+
   );
 };
 
@@ -123,6 +125,24 @@ function MainStack() {
       options={{ headerShown: false, title: 'Profile Posts' }}
       component={ProfilePosts}
     />
+
+    <Stack.Screen
+      name={ScreenRoutes.AccountsScreen.name}
+      options={{ headerShown: false, title: 'Accounts' }}
+      component={Accounts}
+    />
+
+    <Stack.Screen
+      name={ScreenRoutes.NewAccountScreen.name}
+      options={{ headerShown: false, title: 'New Account' }}
+      component={CreateAccount}
+    />
+    <Stack.Screen
+      name={ScreenRoutes.EditAccountScreen.name}
+      options={{ headerShown: false, title: 'Edit Account' }}
+      component={EditAccount}
+    />
+
 
   </Stack.Navigator>
 

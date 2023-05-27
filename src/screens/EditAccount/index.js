@@ -1,10 +1,10 @@
 import { ScrollView, Text, View } from 'react-native'
 import React, { useMemo } from 'react'
-import { useTheme } from '@react-navigation/native';
+import { useRoute, useTheme } from '@react-navigation/native';
 import useSize from '../../hooks/useSize';
 import stylesSheet from './styles';
 import { useDispatch } from 'react-redux';
-import { UiText } from '../../components';
+import { Input, UiText } from '../../components';
 import { AppBarLeft } from '../../components/AppBar';
 import { IconButton } from 'react-native-paper';
 import AppBar from './AppBar';
@@ -18,16 +18,21 @@ import AppBar from './AppBar';
  * 
  * 
  */
-const CreateAccount = ({ navigation }) => {
+const EditAccount = ({ navigation }) => {
     const { colors } = useTheme()
     const { size } = useSize()
     const styles = useMemo(() => stylesSheet(colors, size), [colors]);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const route = useRoute();
+    console.log("item", route.params)
     return (
 
         <View style={{ flex: 1 }}>
-            <AppBar navigation={navigation} title={"New Page"} />
+            <AppBar navigation={navigation} title={"Edit Account"} />
             <ScrollView>
+                <View>
+                    <Input placeholder='Account name' />
+                </View>
 
             </ScrollView>
         </View>
@@ -36,5 +41,5 @@ const CreateAccount = ({ navigation }) => {
     )
 }
 
-export default CreateAccount
+export default EditAccount
 
