@@ -5,6 +5,7 @@ import { ScrollView, Text, View } from 'react-native';
 import AppBar from './AppBar';
 import stylesSheet from './styles';
 import AccountList from './AccountList';
+import RecordList from './RecordList';
 
 
 export const ScreenHomeTab = 'HomeTab';
@@ -21,6 +22,8 @@ function HomeTab() {
                 <View style={styles.container}>
 
                     <AccountList />
+                    <RecordList />
+
                 </View>
             </ScrollView>
 

@@ -12,7 +12,6 @@ const Input = (props: TextInputProps) => {
       mode="outlined"
       theme={{ colors: { text: colors.primaryText, placeholder: colors.secondaryText, background: colors.surface } }}
       //  placeholderTextColor={colors.secondaryText}
-
       {...props}
 
       style={{ ...styles.container, backgroundColor: colors.surface, color: colors.secondaryText, ...props.style, borderColor: colors.border }}

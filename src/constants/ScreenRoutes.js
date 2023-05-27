@@ -36,6 +36,9 @@ export default {
     AccountsScreen: {
         name: "Accounts",
     },
+    RecordScreen:{
+            name:"Records",
+    },
     NewAccountScreen: {
         name: "NewAccount",
     },

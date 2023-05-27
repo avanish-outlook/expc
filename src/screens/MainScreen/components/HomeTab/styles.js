@@ -11,7 +11,16 @@ const stylesSheet = (colors, size) => StyleSheet.create({
         fontWeight: "500",
         color: colors.primaryText,
         flex: 1
+    },
+    timelabel:{
+        fontSize: 12,
+        marginTop: size.S,
+        fontWeight: "500",
+        marginLeft:5,
+        color: colors.primaryText,
+        flex: 1
     }
+
 })
 
 export default stylesSheet;

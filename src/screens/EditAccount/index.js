@@ -33,6 +33,9 @@ const EditAccount = ({ navigation }) => {
                 <View>
                     <Input placeholder='Account name' />
                 </View>
+                <View>
+                    <Input placeholder='Bank Account number' />
+                </View>
 
             </ScrollView>
         </View>
