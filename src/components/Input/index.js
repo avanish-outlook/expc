@@ -6,7 +6,7 @@ import { useTheme } from '@react-navigation/native';
 
 const Input = (props: TextInputProps) => {
   const { colors } = useTheme()
-  console.log("INPUT COLORS", colors)
+
   return (
     <TextInput
       mode="outlined"
@@ -15,7 +15,7 @@ const Input = (props: TextInputProps) => {
 
       {...props}
 
-      style={{ ...styles.container, backgroundColor: colors.surface, color: colors.secondaryText, ...props.style }}
+      style={{ ...styles.container, backgroundColor: colors.surface, color: colors.secondaryText, ...props.style, borderColor: colors.border }}
 
     />
   );

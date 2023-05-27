@@ -8,6 +8,7 @@ import { UiText } from '../../components';
 import { AppBarLeft } from '../../components/AppBar';
 import { IconButton } from 'react-native-paper';
 import AppBar from './AppBar';
+import useScreen from '../../hooks/useScreen';
 
 
 
@@ -19,10 +20,11 @@ import AppBar from './AppBar';
  * 
  */
 const CreateAccount = ({ navigation }) => {
-    const { colors } = useTheme()
-    const { size } = useSize()
+
+    const { colors, dispatch, isDark, navigation, size, themeColor } = useScreen()
     const styles = useMemo(() => stylesSheet(colors, size), [colors]);
-    const dispatch = useDispatch()
+
+
     return (
 
         <View style={{ flex: 1 }}>

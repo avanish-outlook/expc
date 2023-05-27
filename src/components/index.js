@@ -11,3 +11,4 @@ export { default as ProfilePostCard } from './ProfilePostCard';
 export { default as Text } from './Text';
 export { default as Card } from './Card';
 export { default as UiText } from './UiText';
+export { default as CategoryPicker } from './CategoryPicker';
