@@ -1,3 +1,3 @@
-# snapsetu_app
+# expc
 
-React native app for snapsetu_backend
+React native app for exps
